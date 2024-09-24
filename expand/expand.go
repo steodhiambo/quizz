@@ -15,7 +15,7 @@ func main() {
 	for _, char := range os.Args[1] {
 		if char == ' ' {
 			if word != "" {
-				words = append(words, word)
+				words = append(words, word, )
 				word = ""
 			}
 		} else {
@@ -23,12 +23,12 @@ func main() {
 		}
 	}
 	if word != "" {
-		words = append(words, word)
+		words = append(words, word, )
 	}
 
-	for _, word := range words {
-		os.Stdout.WriteString(word+ "   ")
-	}
-	fmt.Print("\nonly   it's   harder")
+	// for _, word := range words {
+	// 	os.Stdout.WriteString(word+ "   ")
+	// }
+	fmt.Print(words)
 	fmt.Println()
 }
