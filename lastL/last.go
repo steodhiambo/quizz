@@ -33,7 +33,7 @@ func main() {
 						word = word[:0]
 					}
 					// Include spaces in the result to maintain spacing
-					words = append(words, " ")
+					//  words = append(words, " ")
 				} else {
 					word += string(arg[i])
 				}
@@ -41,6 +41,7 @@ func main() {
 			if len(word) > 0 {
 				words = append(words, string(word))
 			}
+			fmt.Println(words)
 
 			// Process each word: lower first letter and upper last letter
 			for i, w := range words {
@@ -74,6 +75,9 @@ func main() {
 
 			// Output with the "$" symbol at the end for each argument
 			fmt.Print(result + "$\n")
+
 		}
 	}
+	toConcat := []string{"Hello!", " How", " are", " you?"}
+	fmt.Println(toConcat)
 }
