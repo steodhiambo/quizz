@@ -26,7 +26,8 @@ func main() {
                 words = append(words, word)
         }
         for i := len(words) - 1; i >= 0; i-- {
-                fmt.Print(words[i], " ")
+                //fmt.Print(words[i], " ")
+                os.Stdout.WriteString(words[i]+ " ")
         }
         fmt.Println()
 }
